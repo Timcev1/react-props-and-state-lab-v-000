@@ -49,7 +49,7 @@ class App extends React.Component {
               <Filters
                 filters={this.state.filters}
                 onChangeType={this.handleFilterChange}
-                 onFindPetsClick={this.fetchPets}
+                onFindPetsClick={this.fetchPets}
               />
             </div>
             <div className="twelve wide column">
