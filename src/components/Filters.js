@@ -4,7 +4,7 @@ class Filters extends React.Component {
   constructor() {
     super();
   }
-    handleFilterTypeChange = event => this.props.onChangeType(event.target.value);
+  handleFilterTypeChange = event => this.props.onChangeType(event.target.value);
 
   render() {
     return (
