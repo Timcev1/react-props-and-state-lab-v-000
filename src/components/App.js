@@ -16,6 +16,27 @@ class App extends React.Component {
     };
   }
 
+  fetchPets = () => {
+    let url =`/api/pets`;
+    if(this.state.filters.type !== 'all'){
+      url += `?type=${this.state.filters.type}`;
+    }
+    fetch(url)
+    .then(res => res.json())
+    .then(pets => this.setState({pets}));
+  }
+  handleFilterTypeChange = type => {
+    this.setState({
+      filters: Object.assign({}, this.state.filters, {
+        type: type,
+      })
+    });
+  }
+  adoptPet = petId => {
+    this.setState({
+      adoptedPets: [...this.state.adoptedPets, petId],
+    });
+  }
   render() {
     return (
       <div className="ui container">
