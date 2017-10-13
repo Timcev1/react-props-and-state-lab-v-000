@@ -25,7 +25,7 @@ class App extends React.Component {
     .then(res => res.json())
     .then(pets => this.setState({pets}));
   }
-  handleFilterTypeChange = type => {
+  handleFilterChange = type => {
     this.setState({
       filters: Object.assign({}, this.state.filters, {
         type: type,
@@ -46,7 +46,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Filters 
+                filters={this.state.filters}
+                onChangeType={this.handleFilterChange}
+              />
             </div>
             <div className="twelve wide column">
               <PetBrowser />
