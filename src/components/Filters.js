@@ -17,9 +17,6 @@ class Filters extends React.Component {
             value={this.props.filters.type}
             onChange={this.handleFilterTypeChange}
           >
-          </div>
-        <div className="field">
-          <select name="type" id="type">
             <option value="all">All</option>
             <option value="cat">Cats</option>
             <option value="dog">Dogs</option>
