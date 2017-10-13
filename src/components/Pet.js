@@ -26,6 +26,7 @@ class Pet extends React.Component {
           <button className="ui disabled button">Already adopted</button>
           :
           <button className="ui primary button">Adopt pet</button>
+          }
         </div>
       </div>
     );
