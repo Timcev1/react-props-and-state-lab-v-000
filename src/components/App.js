@@ -56,7 +56,7 @@ class App extends React.Component {
               <PetBrowser
                 pets={this.state.pets}
                 adoptedPets={this.state.adoptedPets}
-                onAdoptPet={this.handleAdoptPet}
+                onAdoptPet={this.adoptPet}
               />
             </div>
           </div>
